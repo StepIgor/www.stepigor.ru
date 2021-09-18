@@ -1,0 +1,15 @@
+{
+  "short_name": "stepigor",
+  "name": "stepigor website",
+  "icons": [
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#3f51b5",
+  "background_color": "#212121"
+}
