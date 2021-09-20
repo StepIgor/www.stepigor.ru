@@ -1,4 +1,5 @@
 import Header from "./Header";
+import ProjectList from "./ProjectList";
 import {useState} from "react";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
     return (
         <div className={`container`}>
-            <Header/>
+            { page == "main" && <div><Header/><ProjectList/></div>}
         </div>
     );
 }
