@@ -20,8 +20,8 @@ function ProjectList(props) {
                     <div className={`plist-element-body`}>
                         <div className={`indigo-text`}>{projects[pj].name}</div>
                         <div>{projects[pj].short_description}</div>
-                        <div>{projects[pj].langs.map((lg) => <span key={lg.toString()}
-                            className={langs[lg].color}> {langs[lg].name}</span>)}</div>
+                        <div className={`langs-list`}>{projects[pj].langs.map((lg) => <div key={lg.toString()}
+                            className={langs[lg].color}> {langs[lg].name}</div>)}</div>
                     </div>
                 </div>
             </Fade>
