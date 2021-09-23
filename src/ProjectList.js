@@ -13,7 +13,7 @@ function ProjectList(props) {
     plist = Object.keys(projects).filter((p) => projects[p].frontend == showFrontend).map((pj) => {
         return (
             <Fade key={pj.toString()}>
-                <div className={`plist-element`}>
+                <div className={`plist-element`} onClick={(e) => {props.editId(pj); props.editPage('project')}}>
                     <div className={`plist-element-picture`}>
                         <img src={'icons/' + projects[pj].icon}/>
                     </div>
@@ -21,7 +21,7 @@ function ProjectList(props) {
                         <div className={`indigo-text`}>{projects[pj].name}</div>
                         <div>{projects[pj].short_description}</div>
                         <div className={`langs-list`}>{projects[pj].langs.map((lg) => <div key={lg.toString()}
-                            className={langs[lg].color}> {langs[lg].name}</div>)}</div>
+                            className={`indigo white-text`}> {langs[lg].name}</div>)}</div>
                     </div>
                 </div>
             </Fade>
