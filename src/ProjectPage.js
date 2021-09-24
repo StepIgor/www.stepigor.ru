@@ -33,6 +33,18 @@ function ProjectPage(props) {
                         <a target="_blank" href={projects[props.id].git} className={`btn indigo white-text`}><i className={`material-icons`}>code</i></a>
                     </div>
                 </div>
+                <div className={`row pj-screens-container`}>
+                    <div className={`col s12 m12 l12`}>
+
+                    </div>
+                </div>
+                <div className={`row pj-description-container`}>
+                    <div className={`col s12 m12 l12`}>
+                        <ul>
+                            {projects[props.id].features.map((f) => <li><i className={`material-icons indigo-text`}>chevron_right</i><span>{f}</span></li>)}
+                        </ul>
+                    </div>
+                </div>
             </Slide>
         </div>
     )

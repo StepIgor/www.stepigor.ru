@@ -122,3 +122,18 @@
 .pj-buttons-mobile > a:first-child {
     width: 100%;
 }
+
+.pj-description-container {
+    margin-top: 25px;
+    background: #424242;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.pj-description-container span {
+    vertical-align: middle;
+}
+
+.pj-description-container i {
+    vertical-align: middle;
+}
