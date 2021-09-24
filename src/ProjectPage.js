@@ -35,7 +35,7 @@ function ProjectPage(props) {
                 </div>
                 <div className={`row pj-screens-container`}>
                     <div className={`col s12 m12 l12`}>
-
+                        {projects[props.id].screenshots.map((s) => <img src={'screenshots/' + s} className={`responsive-img`} />)}
                     </div>
                 </div>
                 <div className={`row pj-description-container`}>

@@ -128,6 +128,7 @@
     background: #424242;
     padding: 12px;
     border-radius: 10px;
+    margin-bottom: 75px;
 }
 
 .pj-description-container span {
@@ -136,4 +137,18 @@
 
 .pj-description-container i {
     vertical-align: middle;
+}
+
+.pj-screens-container {
+    margin-top: 25px;
+    background: #424242;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.pj-screens-container div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: auto;
 }
