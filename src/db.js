@@ -46,6 +46,18 @@ export let projects = {
         git : 'https://github.com/StepIgor/www.stepigor.ru',
         screenshots : ['stepigor.ru.png', 'stepigor.ru (1).png', 'stepigor.ru (2).png'],
         features : ['Представление всех проектов', 'Контактные сведения', 'Скриншоты и описание к работе']
+    },
+    4: {
+        frontend : true,
+        name : 'Расписание',
+        short_description : 'Просмотр сведений о предстоящих событиях',
+        langs : [1],
+        icon : 'schedule.png',
+        active : true,
+        url : 'https://schedule.difres.ru',
+        git : 'https://github.com/StepIgor/schedule.difres.ru',
+        screenshots : ['schedule.difres.ru_(HD).png', 'schedule.difres.ru_export.html(HD) (1).png', 'schedule.difres.ru_export.html(HD).png', 'schedule.difres.ru_show.html(HD) (1).png', 'schedule.difres.ru_show.html(HD) (2).png', 'schedule.difres.ru_show.html(HD).png'],
+        features : ['Множество организаций и событий', 'Экспорт расписания', 'Запоминание выбора']
     }
 }
 

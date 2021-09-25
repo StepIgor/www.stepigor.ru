@@ -50,7 +50,7 @@
 
 .plist-element-picture > img {
     width: 64px;
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
 .plist-element-body {
