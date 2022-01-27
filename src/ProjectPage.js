@@ -1,5 +1,6 @@
 import "./ProjectPage.css"
 import Slide from "react-reveal/Slide";
+import ScreenshotsViewer from "./ScreenshotsViewer";
 import {langs, projects} from "./db";
 
 function ProjectPage(props) {
@@ -34,9 +35,7 @@ function ProjectPage(props) {
                     </div>
                 </div>
                 <div className={`row pj-screens-container`}>
-                    <div className={`col s12 m12 l12`}>
-                        {projects[props.id].screenshots.map((s) => <img src={'screenshots/' + s} className={`responsive-img`} />)}
-                    </div>
+                    <ScreenshotsViewer shots={projects[props.id].screenshots} />
                 </div>
                 <div className={`row pj-description-container`}>
                     <div className={`col s12 m12 l12`}>

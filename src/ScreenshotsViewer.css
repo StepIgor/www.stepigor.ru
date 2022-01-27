@@ -1,0 +1,24 @@
+.viewer-container {
+    position: relative;
+}
+
+.viewer-container > div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+    cursor: pointer;
+    opacity: 0.33;
+}
+
+.viewer-container > div:hover {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.viewer-container > div:last-child {
+    right: 0;
+    top: 0;
+}

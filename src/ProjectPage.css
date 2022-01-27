@@ -145,10 +145,3 @@
     padding: 12px;
     border-radius: 10px;
 }
-
-.pj-screens-container div {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    overflow-x: auto;
-}
