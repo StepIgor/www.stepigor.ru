@@ -58,6 +58,18 @@ export let projects = {
         git : 'https://github.com/StepIgor/schedule.difres.ru',
         screenshots : ['schedule.difres.ru_(HD).png', 'schedule.difres.ru_export.html(HD) (1).png', 'schedule.difres.ru_export.html(HD).png', 'schedule.difres.ru_show.html(HD) (1).png', 'schedule.difres.ru_show.html(HD) (2).png', 'schedule.difres.ru_show.html(HD).png'],
         features : ['Множество организаций и событий', 'Экспорт расписания', 'Запоминание выбора']
+    },
+    5: {
+        frontend: true,
+        name: 'Car Service PWA',
+        short_description: 'Полноценное PWA-приложение для автосервиса',
+        langs: [0, 1],
+        icon: 'carservice.png',
+        active: true,
+        url: 'https://carservice.difres.ru',
+        git: 'https://github.com/StepIgor/carservice.difres.ru',
+        screenshots: ['carservice.difres.ru_(HD).png', 'carservice.difres.ru_(HD) (1).png', 'carservice.difres.ru_(HD) (2).png', 'carservice.difres.ru_(HD) (3).png', 'carservice.difres.ru_(HD) (4).png', 'carservice.difres.ru_(HD) (5).png', 'carservice.difres.ru_(HD) (6).png'],
+        features: ['Полноценная реализация PWA (Web Manifest, Service Worker, рекомендации Lighthouse)', 'PUSH-уведомления', 'Offline-работа']
     }
 }
 
