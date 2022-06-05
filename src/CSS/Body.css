@@ -1,0 +1,31 @@
+.body-wrapper {
+    width: calc(100vw - 32px);
+    padding: 16px;
+    margin-top: -48px;
+    font-size: 14px;
+    min-height: 96px;
+    animation: body-reveal 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@media (prefers-color-scheme: dark) {
+    .body-wrapper {
+        background: #212121;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .body-wrapper {
+        background: #fafafa;
+    }
+}
+
+@keyframes body-reveal {
+    0% {
+        border-radius: 0;
+    }
+    100% {
+        border-radius: 24px;
+    }
+}

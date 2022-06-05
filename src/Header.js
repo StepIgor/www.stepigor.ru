@@ -1,29 +1,54 @@
-import "./Header.css"
-import Slide from "react-reveal/Slide"
+import "./CSS/Header.css"
+import {useEffect, useState} from "react";
+
 
 function Header(props){
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
+    const [date, setDate] = useState(new Date().toLocaleDateString());
+
+    function updateDateTime(){
+        let date = new Date();
+        setTime(date.toLocaleTimeString());
+        setDate(date.toLocaleDateString());
+    }
+
+    setInterval(updateDateTime, 1000);
+
     return (
-        <Slide bottom>
-            <div className={`row center-align header`}>
-                <div className={`col s12 m12 l12`}>
-                    <div className={`logo hide-on-small-only`}>
-                        stepigor.ru
+        <div className={`header-wrapper ${props.url == '' ? 'index-page-background' : ''}`}>
+            {
+                props.url == '' &&
+                <div className={`header-inner-block`}>
+                    <div>
+                        <img src="img/avatar.jpg" />
                     </div>
-                    <div className={`hide-on-med-and-up logo-mobile`}>
-                        stepigor.ru
+                    <div className={`header-text-content`}>
+                        <div className={`header-text-title`}>
+                            <div>
+                                stepigor.ru
+                            </div>
+                            <div>
+                                the main developer's website
+                            </div>
+                        </div>
+                        <div className={'header-title-links'}>
+                            <a href="mailto:igor.stepanov@difres.ru"><i className={`material-icons`}>email</i>Mail</a>
+                            <a href="https://t.me/stepigor"><i className={`material-icons`}>chat</i>Telegram</a>
+                            <a href="https://github.com/stepigor"><i className={`material-icons`}>code</i>GitHub</a>
+                        </div>
                     </div>
-                    <div className={`logo-description light`}>
-                        main developer's website
-                    </div>
-                    <div className={`logo-contacts`}>
-                        <a href="mailto:igor.stepanov@difres.ru" target="_blank" className={`white-text`}><i className={`white-text material-icons`}>email</i> <span>igor.stepanov@difres.ru</span></a>
-                        <a href="https://t.me/stepigor" target="_blank" className={`white-text`}><i className={`white-text material-icons`}>message</i> <span>Telegram</span></a>
-                        <a href="https://github.com/stepigor" target="_blank" className={`white-text`}><i className={`white-text material-icons`}>code</i> <span>GitHub</span></a>
+                    <div className={`desktop-timedate`}>
+                        <div>
+                            {time}
+                        </div>
+                        <div>
+                            {date}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </Slide>
+            }
+        </div>
     )
 }
 
-export default Header
+export default Header;

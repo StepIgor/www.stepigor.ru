@@ -1,0 +1,23 @@
+@media (prefers-color-scheme: dark){
+    .site-wrapper{
+        background-color: #212121;
+        color: white;
+    }
+}
+
+@media (prefers-color-scheme: light){
+    .site-wrapper{
+        background-color: #fafafa;
+        color: black;
+    }
+}
+
+.site-wrapper {
+    font-family: Tahoma;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+}
