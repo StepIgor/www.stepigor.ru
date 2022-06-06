@@ -26,6 +26,15 @@
     }
 }
 
+@keyframes opacity-anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .header-inner-block {
     width: 80%;
     border-radius: 16px;
@@ -107,6 +116,10 @@
     background: linear-gradient(0deg, #673ab7 15%, #2196f3);
 }
 
+.error-page-background {
+    background: linear-gradient(0deg, #f44336 15%, #b71c1c);
+}
+
 @media (max-width: 998px) {
     .desktop-timedate {
         display: none;
@@ -134,3 +147,27 @@
     }
 }
 
+.header-error-block {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    animation: opacity-anim 0.25s ease-in;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+.header-error-block > i {
+    font-size: 96px;
+}
+
+.header-error-block > span:last-child {
+    font-size: 14px;
+    font-weight: normal;
+    color: lightgray;
+}

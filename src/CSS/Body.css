@@ -29,3 +29,33 @@
         border-radius: 24px;
     }
 }
+
+@keyframes body-opacity-anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.body-wrapper > * {
+    animation: body-opacity-anim 0.5s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.body-error-content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}

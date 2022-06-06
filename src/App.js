@@ -10,12 +10,17 @@ function App() {
     useEffect(() => {
         let currentUrl = window.location.href.split('/')
         setUrl(currentUrl[currentUrl.length - 1]);
+
+        return window.addEventListener('popstate', (e) => {
+            let currentUrl = window.location.href.split('/')
+            setUrl(currentUrl[currentUrl.length - 1]);
+        })
     }, [])
 
     return (
         <div className={`site-wrapper`}>
             <Header url={url}/>
-            <Body url={url}/>
+            <Body url={url} setUrl={setUrl}/>
         </div>
     );
 }
