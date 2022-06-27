@@ -1,27 +1,15 @@
 import "./CSS/Header.css"
-import {useEffect, useState} from "react";
 import {db} from "./data/db";
 
 
 function Header(props){
-    const [time, setTime] = useState(new Date().toLocaleTimeString());
-    const [date, setDate] = useState(new Date().toLocaleDateString());
-
-    function updateDateTime(){
-        let date = new Date();
-        setTime(date.toLocaleTimeString());
-        setDate(date.toLocaleDateString());
-    }
-
-    setInterval(updateDateTime, 1000);
-
     return (
         <div className={`header-wrapper ${props.url == '' ? 'index-page-background' : Object.keys(db).indexOf(props.url) == -1 ? 'error-page-background' : ''}`}>
             {
                 props.url == '' &&
                 <div className={`header-inner-block`}>
                     <div>
-                        <img src="img/avatar.jpg" />
+                        <img src="img/avatar.png" />
                     </div>
                     <div className={`header-text-content`}>
                         <div className={`header-text-title`}>
@@ -40,10 +28,10 @@ function Header(props){
                     </div>
                     <div className={`desktop-timedate`}>
                         <div>
-                            {time}
+                            Backend & Frontend Development
                         </div>
                         <div>
-                            {date}
+                            Website last update: 01.07.2022
                         </div>
                     </div>
                 </div>
